@@ -1,5 +1,5 @@
 const pixelArt = document.getElementById('pixel-art');
-const numPixels = 300; // Nombre de pixels à générer
+const numPixels = 484; // Nombre de pixels à générer
 
 // Création des pixels en boucle
 for (let i = 0; i < numPixels; i++) {

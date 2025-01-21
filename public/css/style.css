@@ -1,0 +1,62 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ee7752, #e73c7e,#f48c5c,#f0ff92,#e9f298, #23a6d5, #23d5ab,#b074e4);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    padding: 2rem;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Pixel art grid */
+  #pixel-art {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 2px;
+    aspect-ratio: 1;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+  }
+  
+  .pixel {
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    cursor: crosshair;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .pixel:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
